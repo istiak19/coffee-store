@@ -15,7 +15,7 @@ const routers = createBrowserRouter([
         children: [
             {
                 path: '/',
-                loader: () => fetch('http://localhost:5000/coffee'),
+                loader: () => fetch('https://coffee-store-server-nu-sooty.vercel.app/coffee'),
                 element: <Home></Home>
             },
             {
@@ -24,26 +24,26 @@ const routers = createBrowserRouter([
             },
             {
                 path: '/coffee/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`),
+                loader: ({ params }) => fetch(`https://coffee-store-server-nu-sooty.vercel.app/coffee/${params.id}`),
                 element: <CardDetails></CardDetails>
             },
             {
                 path: '/update/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`),
+                loader: ({ params }) => fetch(`https://coffee-store-server-nu-sooty.vercel.app/coffee/${params.id}`),
                 element: <UpdateCoffee></UpdateCoffee>
             },
             {
-                path:'/sign-in',
-                element:<SignIn></SignIn>
+                path: '/sign-in',
+                element: <SignIn></SignIn>
             },
             {
-                path:'/sign-up',
-                element:<SignUp></SignUp>
+                path: '/sign-up',
+                element: <SignUp></SignUp>
             },
             {
-                path:'/users',
-                loader:()=>fetch('http://localhost:5000/users'),
-                element:<User></User>
+                path: '/users',
+                loader: () => fetch('https://coffee-store-server-nu-sooty.vercel.app/users'),
+                element: <User></User>
             }
         ]
     }

@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 const CoffeeCard = ({ coffee, setCoffees, coffees }) => {
     const { _id, name, chef, photo } = coffee
     const handleDelete = id => {
-        fetch(`http://localhost:5000/coffee/${id}`, {
+        fetch(`https://coffee-store-server-nu-sooty.vercel.app/coffee/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

@@ -14,7 +14,7 @@ const SignUp = () => {
                 console.log(result.user)
                 const createAi = result.user?.metadata?.creationTime
                 const newUser = { name, email, createAi }
-                fetch('http://localhost:5000/users', {
+                fetch('https://coffee-store-server-nu-sooty.vercel.app/users', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
